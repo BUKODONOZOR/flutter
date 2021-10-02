@@ -1,0 +1,107 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  final String title;
+
+  const MyHomePage({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Column(children: [
+          Container(
+            color: Colors.orange,
+            child: Text('Flutter Demo'),
+          ),
+          Container(
+            color: Colors.blue,
+            child: RichText(
+                text: TextSpan(
+                    text:
+                        'Doña Uzeada de Ribera Maldonado de Bracamonte y Anaya era baja, rechoncha, abigotada. Ya no existia razon para'
+                        ' llamar talle al suyo. Sus colores vivos, sanos, podian mas que el albayalde y el '
+                        'soliman del afeite, con que se blanqueaba por simular melancolias. Gastaba dos'
+                        ' parches oscuros, adheridos a las sienes y que'
+                        ' fingian medicamentos. Tenia los ojitos ratoniles, maliciosos. Sabia'
+                        ' dilatarlos duramente o desmayarlos con recato o levantarlos con disimulo. Caminaba contoneando las'
+                        ' imposibles caderas y era dificil, al verla, no asociar su estampa'
+                        'achaparrada con la de ciertos palmipedos domesticos. Sortijas celestes y azules le ahorcaban las falanges')),
+          ),
+          Container(
+            color: Colors.purple,
+            child: Row(children: [
+              Icon(Icons.star),
+              Icon(Icons.star),
+              Icon(Icons.star),
+              Icon(Icons.star),
+              Icon(Icons.star),
+              Text('         '),
+              Text('1899 comentarios')
+            ]),
+          ),
+          Container(
+              color: Colors.purple,
+              child: Row(children: [
+                Column(children: [
+                  Icon(
+                    Icons.access_time,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                  Text('Reloj'),
+                  Text(''),
+                  Text('Muestra la hora'),
+                ]),
+                Column(children: [
+                  Icon(
+                    Icons.access_time,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                  Text('Reloj'),
+                  Text(''),
+                  Text('    Muestra la hora'),
+                ]),
+                Column(children: [
+                  Icon(
+                    Icons.access_time,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                  Text('Reloj'),
+                  Text(''),
+                  Text('    Muestra la hora'),
+                ])
+              ])),
+        ]));
+  }
+}
